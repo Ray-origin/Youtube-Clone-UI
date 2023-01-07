@@ -49,7 +49,8 @@ export default function Watch() {
         <ReactPlayer
           url={`https://www.youtube.com/watch?v=${id.id}`}
           width="100%"
-          height="720px"
+          height="calc(100vw * 9/16)"
+          style={{ maxHeight: "720px" }}
           controls
           className={styles.watch__player}
           // playing={true}

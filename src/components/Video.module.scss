@@ -42,3 +42,12 @@
         box-shadow: 0px 0px 20px grey;
     }
 }
+
+@media (max-width:400px){
+    .video{
+        width: 76vw;
+        .video__thumbnail{
+            width: 100%;
+        }
+    }
+}
