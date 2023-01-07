@@ -1,0 +1,43 @@
+.sidebar{
+    flex: .1;
+    position: sticky;
+    top: 80px;
+    // overflow-y: auto;
+    hr{
+      margin: 20px 0;
+      border: 0;
+      background-color:  lightgray;
+      height: 1px;  
+    }
+    .sidebar__section{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h3{
+        text-transform: none;
+        letter-spacing: unset;
+        padding: 6px 24px 4px;
+        font-size: 20px;
+        // line-height: 2.2rem;
+        font-weight: 400;
+      }
+    }
+}
+
+@media ( max-width:600px){
+  .sidebar{
+    // display: none;
+    position: relative;
+    display: flex;
+    overflow: auto;
+    height: 50px;
+    flex: auto;
+    top: 0;
+    ::-webkit-scrollbar{
+      display: none;
+    }
+    .sidebar__section{
+      flex-direction: row;
+    }
+  }
+}

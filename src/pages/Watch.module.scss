@@ -1,0 +1,132 @@
+.watch{
+    display: flex;
+    width: 100%;
+    position: sticky;
+    top: 86px;
+    .watch__videoDetail{
+        flex: 70%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 100px;
+        margin-top: 20px;
+        >h2{
+            font-weight: 600;
+            margin-top: 5px;
+        }
+        .watch__bannerAvatar{
+            display: flex;
+            margin-bottom: 30px ;
+            margin-top: 10px;
+            justify-content: space-between;
+            .watch__info{
+                display: flex;
+                gap: 10px;
+                .watch__innerAvatar{
+                    width: 40px;
+                    height: 40px;
+                    
+                }
+                .watch__title{
+                    display: flex;
+                    align-items: baseline;
+                    flex-direction: column;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    margin: 0!important;
+                    > h3{
+                        margin: 0!important;
+                        font-weight: 600;
+                    }
+                    > h5 {
+                        color: gray;
+                        font-weight: 400;
+                    }
+                }
+                .watch__subscribeButton{
+                    border-radius: 20px;
+                    background-color: #000;
+                    color: #fff;
+                    text-align: center;
+                    width: 93px;
+                    cursor: pointer;
+                    border: none;
+                    outline: none;
+                    margin-left: 10px;
+                    font-weight: 600;
+                    &:hover{
+                        background-color: rgb(45, 45, 45);
+                    }
+                }
+            }
+            .watch__action{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                .watch__LDLButtons{
+                    display: flex;
+                    background-color: #f2f2f2;
+                    border-radius: 20px;
+                    position: relative;
+                }
+                .watch__actionButton{
+                    border: none;
+                    outline: none;
+                    border-radius:20px;
+                    padding: 10px 10px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    background-color: #f2f2f2;
+                    &:hover{
+                        background-color: #e5e5e5;
+                        cursor: pointer;
+                    }
+                    &:first-child{
+                        border-radius: 20px 0 0 20px;
+                        &::after{
+                            content: "";
+                            background: gray;
+                            width: 1px;
+                            height: 20px;
+                            right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .watch__description{
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+    }
+    .watch__recommended{
+        flex: 30%;
+    }
+}
+
+@media (max-width:1300px) and (min-width:911px){
+    .watch{
+        flex-direction: column;
+        .watch__videoDetail{
+            margin: 20px;
+        }
+    }
+}
+
+@media (max-width:910px) {
+    .watch{
+        flex-direction: column;
+        .watch__videoDetail{
+            margin: 20px;
+            .watch__bannerAvatar{
+                .watch__action{
+                    .watch__actionButton{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
